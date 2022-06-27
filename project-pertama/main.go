@@ -7,6 +7,20 @@ import (
 	"strconv"
 )
 
+func printBio(i []string, data []model.Biodata) {
+	if len(i) == 2 {
+		l, err := strconv.Atoi(i[1])
+		if err != nil {
+			fmt.Println("masukin angka!")
+			return
+		}
+		v := data[l-1]
+		fmt.Printf("%s\n%s\n%s\n%s\n", v.Nama, v.Alamat, v.Pekerjaan, v.Alasan)
+	} else {
+		fmt.Println("belum masukin angka bos!")
+	}
+}
+
 func main() {
 
 	//biodata assignment:
@@ -32,16 +46,7 @@ func main() {
 
 	newArgs := os.Args
 
-	if len(newArgs) == 2 {
-		l, err := strconv.Atoi(newArgs[1])
-		if err != nil {
-			fmt.Println("masukin angka!")
-			return
-		}
-		v := allbio[l]
-		fmt.Printf("%s\n%s\n%s\n%s\n", v.Nama, v.Alamat, v.Pekerjaan, v.Alasan)
-
-	}
+	printBio(newArgs, allbio)
 
 	// //slice:
 	// var slice = []string{"Budi", "Cacing", "Dede", "Gemez"}
