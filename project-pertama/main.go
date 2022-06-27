@@ -11,31 +11,24 @@ func main() {
 
 	//biodata assignment:
 
-	bio1 := model.Biodata{
-		Nama:      "Anton",
-		Alamat:    "Jakarta",
-		Pekerjaan: "Pengangguran",
-		Alasan:    "Cepat kaya",
+	allbio := []model.Biodata{
+		{
+			Nama:      "Anton",
+			Alamat:    "Jakarta",
+			Pekerjaan: "Pengangguran",
+			Alasan:    "Cepat kaya",
+		}, {
+			Nama:      "Budi",
+			Alamat:    "Bekasi",
+			Pekerjaan: "Dukun Santet",
+			Alasan:    "Biar bisa santet online",
+		}, {
+			Nama:      "Cacing",
+			Alamat:    "Bogor",
+			Pekerjaan: "Bidan",
+			Alasan:    "magabut",
+		},
 	}
-
-	bio2 := model.Biodata{
-		Nama:      "Budi",
-		Alamat:    "Bekasi",
-		Pekerjaan: "Dukun Santet",
-		Alasan:    "Biar bisa santet online",
-	}
-
-	bio3 := model.Biodata{
-		Nama:      "Cacing",
-		Alamat:    "Bogor",
-		Pekerjaan: "Bidan",
-		Alasan:    "magabut",
-	}
-
-	allbio := []model.Biodata{}
-	allbio = append(allbio, bio1)
-	allbio = append(allbio, bio2)
-	allbio = append(allbio, bio3)
 
 	newArgs := os.Args
 
